@@ -13,9 +13,10 @@ const logger = createLogger('todos')
 export const handler = middy(
   async (event: APIGatewayProxyEvent): Promise<APIGatewayProxyResult> => {
     // Write your code here
-    const userId = getUserId(event);
-    logger.info("Call getTodosForUser with userId", userId)
-    const res = await getTodosForUser(userId);
+    const userIdTodo = getUserId(event);
+    logger.info("Call getTodosForUser with userId", userIdTodo)
+    //Get Todos for currentuser
+    const res = await getTodosForUser(userIdTodo);
 
     return {
       statusCode: 200,
@@ -28,9 +29,9 @@ export const handler = middy(
 
 
 handler
-  .use(httpErrorHandler())
-  .use(
+  .use(httpErrorHandler()) //Call
+  .use( //use
   cors({
-    credentials: true
+    credentials: true //credentials
   })
 )
