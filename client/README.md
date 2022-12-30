@@ -42,3 +42,8 @@ You don’t have to ever use `eject`. The curated feature set is suitable for sm
 You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
 To learn React, check out the [React documentation](https://reactjs.org/).
+
+New implementation description:
+I implement edit name functionality as the screenshot ./edit_name_new_functionality.png
+Enhance delete file to make sure the file is totally deleted in S3
+I list out file changes in ./list_new_changes.png
